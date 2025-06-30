@@ -12,11 +12,11 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Serve frontend assets (CSS, JS)
-app.use('/css', express.static(path.join(__dirname, '../css')));
-app.use('/js', express.static(path.join(__dirname, '../js')));
+app.use('/css', express.static(path.join(__dirname, '../../Blog-site new/Bloggg/css')));
+app.use('/js', express.static(path.join(__dirname, '../../Blog-site new/Bloggg/js')));
 
 // Serve HTML pages
-app.use(express.static(path.join(__dirname, '..')));
+app.use(express.static(path.join(__dirname, '../../Blog-site new/Bloggg')));
 
 // API Routes
 app.use('/api', require('./routes/auth'));
@@ -24,7 +24,7 @@ app.use('/api/blogs', require('./routes/blog'));
 
 // Fallback for root
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, '../index.html'));
+  res.sendFile(path.join(__dirname, '../../Blog-site new/Bloggg/index.html'));
 });
 
 // Server
